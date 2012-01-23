@@ -17,10 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "vim"
-
-package "unzip"
-
 case node["platform"]
 when "centos", "redhat", "fedora"
   # nothing yet
@@ -29,3 +25,7 @@ when "debian", "ubuntu"
 else
   # nothing yet
 end
+
+include_recipe "vim"
+
+package "unzip"
