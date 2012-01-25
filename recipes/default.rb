@@ -20,6 +20,7 @@
 case node["platform"]
 when "centos", "redhat", "fedora"
   include_recipe "rpmforge"
+  include_recipe "selinux::disabled"
 when "debian", "ubuntu"
   include_recipe "apt"
 end
