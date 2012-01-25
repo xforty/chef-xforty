@@ -18,6 +18,8 @@
 #
 
 case node["platform"]
+when "centos", "redhat", "fedora"
+  include_recipe "rpmforge"
 when "debian", "ubuntu"
   include_recipe "apt"
 end
