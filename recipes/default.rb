@@ -18,14 +18,11 @@
 #
 
 case node["platform"]
-when "centos", "redhat", "fedora"
-  # nothing yet
 when "debian", "ubuntu"
   include_recipe "apt"
-else
-  # nothing yet
 end
 
 include_recipe "vim"
 
+package "strace"
 package "unzip"
