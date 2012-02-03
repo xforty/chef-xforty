@@ -22,6 +22,12 @@ when "centos", "redhat", "fedora"
   include_recipe "rpmforge"
   include_recipe "selinux::disabled"
 when "debian", "ubuntu"
+  # make sure apt package cache is up-to-date
+  execute "apt-get-update" do
+    command "apt-get update"
+  end
+  
+  # set up apt
   include_recipe "apt"
 end
 
