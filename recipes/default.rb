@@ -35,3 +35,10 @@ include_recipe "vim"
 
 package "strace"
 package "unzip"
+
+
+package "avahi-daemon"
+
+service "avahi-daemon" do
+  action [ :enable, :restart ]
+end
