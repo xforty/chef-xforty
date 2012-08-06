@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
+# Platform-specific configuration
 case node["platform"]
 when "centos", "redhat", "fedora"
   include_recipe "rpmforge"
@@ -31,14 +32,13 @@ when "debian", "ubuntu"
   include_recipe "apt"
 end
 
+# Include common software
 include_recipe "vim"
-
 package "strace"
 package "unzip"
-
-
 package "avahi-daemon"
 
+# Restart avahi so any changes during install are picked up
 service "avahi-daemon" do
   action [ :enable, :restart ]
 end
