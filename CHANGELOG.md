@@ -1,6 +1,10 @@
 chef-xforty changelog
 =====================
 
+### 1.1.0 (August 13, 2012)
+
+  * Add xforty-specific drush recipe [GH-1]
+
 ### 1.0.0 (August 9, 2012)
 
   * Started using git-flow for development
