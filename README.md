@@ -1,6 +1,6 @@
 chef-xforty
 ===========
-version 1.0.0 - [changelog](https://github.com/xforty/chef-xforty/blob/master/CHANGELOG.md)
+version 1.1.0 - [changelog](https://github.com/xforty/chef-xforty/blob/master/CHANGELOG.md)
 
 ### Description
 
